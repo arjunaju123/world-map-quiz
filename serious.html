@@ -17,7 +17,7 @@
             <div class="col-lg-10">
                 <div class="card text-center">
                     <div class="card-body">
-                        <h2 class="card-title mb-4">Which is the largest continent?</h2>
+                        <h2 class="card-title mb-4" id="question">Which is the largest continent?</h2> <!---- added id>--->
                         <p class="card-text text-success mb-4"><strong>Correct!</strong></p>
                         <div class="map-container mb-3">
                             <img src="./assets/download.png" usemap="#image-map">
@@ -45,12 +45,13 @@
                                     shape="poly">
                             </map>
                         </div>
-                        <a href="#" class="btn btn-primary button-div">Next Question</a>
+                        <a href="#" class="btn btn-primary button-div" onclick="changeQuestion()">Next Question</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="changeQuest.js"></script>
 </body>
 
 </html>
@@ -58,8 +59,3 @@
 
 
 
-function checkAnswer(index){
-    if(index == answers[anotherIndex] ){
-        
-    }
-}
