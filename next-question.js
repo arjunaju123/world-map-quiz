@@ -29,8 +29,10 @@ const nextQuestion = () => {
 
     scorePercentage = (userScore/numberOfQuestions)*100;
     document.getElementById("cardBody").innerHTML = `
-                    <h2 class="card-title mb-4">Game Completed!</h2>
-                    <p class="card-text">You have completed the game with a score ${userScore}</p>`;
+      <h2 class="card-title mb-4">Game Completed!</h2>
+      <p class="card-text">You have completed the game with a score ${userScore}</p>
+      <div><img src="assets/animated_gif.gif" alt="Animated GIF" style="width: 300px; height: auto;"></div>`;
+
 
     // You can calculate the user's score based on their answers and questions attempted
     // For simplicity, let's assume a fixed score here
@@ -71,7 +73,8 @@ const answers=[
   
   const checkAnswer = (clickedContinent) =>  {
     console.log("Check Answer Called")
-      const correctAnswer = answers[currentQuestionCount];
+      // const correctAnswer = answers[currentQuestionCount];
+      const correctAnswer = answers[randomIndex-1];
   
       console.log("Correct Answer: ", correctAnswer)
       if (clickedContinent == correctAnswer) {    
