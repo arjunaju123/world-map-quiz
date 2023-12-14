@@ -29,15 +29,40 @@ const questions = new Map([
 
 let currentQuestionIndex = 0; // Initialize question index
 
-function changeQuestion() {
-    const questionElement = document.getElementById("question");
+// function changeQuestion() {
+//     const questionElement = document.getElementById("question");
 
-    if (currentQuestionIndex < questions.size) {
-        currentQuestionIndex++; // Move to the next question
-    } else {
-        currentQuestionIndex = 1; // If no more questions, restart from the first question
+//     if (currentQuestionIndex < questions.size) {
+//         currentQuestionIndex++; // Move to the next question
+//     } else {
+//         currentQuestionIndex = 1; // If no more questions, restart from the first question
+//     }
+
+//     // Update the question content using the Map's get() method
+//     questionElement.textContent = questions.get(currentQuestionIndex);
+// }
+
+let askedQuestions = [];
+let randomIndex = 0;
+
+function changeQuestion(){
+    const questionElement = document.getElementById("question");
+    
+    if (askedQuestions.length === questions.size) {
+        // If all questions have been asked, reset the askedQuestions array
+        askedQuestions = [];
     }
 
-    // Update the question content using the Map's get() method
-    questionElement.textContent = questions.get(currentQuestionIndex);
+    // let randomIndex;
+    do {
+        // Generate a random index within the range of the questions
+        randomIndex = Math.floor(Math.random() * questions.size) + 1;
+    } while (askedQuestions.includes(randomIndex));
+
+    // Update the question content using the randomly generated index
+    questionElement.textContent = questions.get(randomIndex);
+
+    // Add the asked question index to the askedQuestions array
+    askedQuestions.push(randomIndex);
 }
+
