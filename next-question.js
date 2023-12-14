@@ -71,7 +71,8 @@ const answers=[
   
   const checkAnswer = (clickedContinent) =>  {
     console.log("Check Answer Called")
-      const correctAnswer = answers[currentQuestionCount];
+      // const correctAnswer = answers[currentQuestionCount];
+      const correctAnswer = answers[randomIndex-1];
   
       console.log("Correct Answer: ", correctAnswer)
       if (clickedContinent == correctAnswer) {    

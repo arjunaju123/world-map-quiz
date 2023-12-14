@@ -26,26 +26,19 @@ const questions = new Map([
 // const questionCountInput = document.getElementById("questionCountInput");
 // const numberOfQuestions = questionCountInput.value;
 // console.log(`Number of questions entered: ${numberOfQuestions}`);
+//let currentQuestionIndex = 1; // Initialize question index
 
-let currentQuestionIndex = 0; // Initialize question index
-
-// function changeQuestion() {
+// function changeQuestionRandom() {
 //     const questionElement = document.getElementById("question");
-
-//     if (currentQuestionIndex < questions.size) {
-//         currentQuestionIndex++; // Move to the next question
-//     } else {
-//         currentQuestionIndex = 1; // If no more questions, restart from the first question
-//     }
-
-//     // Update the question content using the Map's get() method
-//     questionElement.textContent = questions.get(currentQuestionIndex);
+//           // Generate a random index within the range of your questions
+//     const randomIndex = Math.floor(Math.random() * questions.size) + 1;
+//     // Update the question content using the randomly generated index
+//     questionElement.textContent = questions.get(randomIndex) 
 // }
 
-let askedQuestions = [];
-let randomIndex = 0;
+let askedQuestions = []; // Array to keep track of asked questions
 
-function changeQuestion(){
+function changeQuest() {
     const questionElement = document.getElementById("question");
     
     if (askedQuestions.length === questions.size) {
@@ -53,7 +46,7 @@ function changeQuestion(){
         askedQuestions = [];
     }
 
-    // let randomIndex;
+    let randomIndex;
     do {
         // Generate a random index within the range of the questions
         randomIndex = Math.floor(Math.random() * questions.size) + 1;
@@ -65,4 +58,3 @@ function changeQuestion(){
     // Add the asked question index to the askedQuestions array
     askedQuestions.push(randomIndex);
 }
-
