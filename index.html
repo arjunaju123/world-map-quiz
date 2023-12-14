@@ -10,28 +10,109 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <title>World Map Game</title>
+
+    <script src="worldmap.js"></script>
+
+    <style>
+
+        @import url("https://fontlibrary.org//face/minecraftia");
+
+        body {
+            /* Set the background image and specify its path */
+            background-image: url('./assets/1000104845.jpg');
+            /* Set background size to cover the entire screen */
+            background-size: cover;
+            /* Set background attachment to fixed for a fixed background image */
+            background-attachment: fixed;
+        }
+
+        
+        .card {
+             font-family: 'MinecraftiaRegular';
+            font-weight: bold;
+            font-style: normal;
+            position: absolute;
+            top: 8em;
+            right: 15px;
+            width: 40%;
+            padding-bottom: 0px;
+            background-color: transparent;
+            /* margin-left: auto;
+            margin-right: 0;
+            margin-top: 0; */
+        }
+        .gametitle {
+            text-shadow: 5% 5% palevioletred;
+            color: rgb(255, 135, 155);
+            font-family: 'MinecraftiaRegular';
+            border-color: transparent;
+            font-weight: bold;
+            font-style: normal;
+            text-align: center;
+            font-size: 4em;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            transform: translate(-50%, -50%); /* Center the text */
+           text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+
+}
+
+        .inputform{
+             font-family: 'MinecraftiaRegular';
+            font-weight: bold;
+            font-style: normal;
+            margin-top: 18em;
+            
+        }
+
+        .card-body{
+            background-color:transparent;
+            
+        }
+        .card-title{
+            background-color: transparent;
+            color: black;
+        }
+
+        .list-group-item{
+            background-color: transparent;
+            color: black;
+        }
+        .list-group{
+            color: white;
+            background-color: transparent;
+        }
+
+        .cloud {
+            position: absolute;
+            top: 0px; /* Adjust the distance from the top */
+            left: -200px; /* Start position outside the left side of the screen */
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 10%;
+            animation: moveCloud 10s linear infinite;
+        }
+
+        @keyframes moveCloud {
+            to {
+                transform: translateX(calc(100vw + 200px)); /* Move the cloud to the right side of the screen */
+            }
+        }
+
+       
+    </style>
 </head>
 
 <body>
     <div class="container mt-5">
-        <div class="card">
-            <div class="card-header text-center">
-                Welcome to the World Map Game!
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Instructions</h5>
-                <ul class="list-group list-group-flush mb-4">
-                    <li class="list-group-item">Enter your name</li>
-                    <li class="list-group-item">Enter the number of questions you would like to answer</li>
-                    <li class="list-group-item">For answering, click on the continent you think is the answer</li>
-                    <li class="list-group-item">At the end of the quiz, you will get your result - pass/fail</li>
-                </ul>
-
-                <div class="prompt-box">
-                    <div class="container my-5">
-                        <form>
+        <div class="cloud"><img src="/assets/cloud_pixel1.png"></div>
+        <h1 class="gametitle">WORLD MAP GAME</h1>
+        <div class="inputform1">
+         <form class="inputform">
                             <div class="mb-3">
-                                <label for="firstName" class="form-label">First name:</label>
+                                <label for="firstName" class="form-label">PLAYER:</label>
                                 <input type="text" id="firstName" placeholder="Enter first name">
                             </div>
                             <div class="mb-3">
@@ -49,7 +130,32 @@
                                     <option value="10">10</option>
                                 </select>
                             </div>
+                            <div>
+                                <a href="./serious.html">
+                                    <button class="btn btn-primary" onclick="storeUserData()">Get Started!</button>
+                                </a>
+
+                              <!-- <a href="./serious.html" onclick="storeUserData()">Get Started</a> -->
+                            </div>
                         </form>
+               
+                        </div>
+        <div class="card">
+            <!-- <div class="card-header text-center">
+                Welcome to the World Map Game!
+            </div> -->
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">Instructions</h5>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item">Enter your name</li>
+                    <li class="list-group-item">Enter the number of questions you would like to answer</li>
+                    <li class="list-group-item">For answering, click on the continent you think is the answer</li>
+                    <li class="list-group-item">At the end of the quiz, you will get your result - pass/fail</li>
+                </ul>
+
+                <div class="prompt-box">
+                    <div class="container my-5">
+                       
                     </div>
 
                 </div>
@@ -68,8 +174,6 @@
     </div>
     </div>
     <!-- <script src="changeQuest.js"></script> -->
-
-    <script src="worldmap.js"></script>
 
     <!-- <script src="game.js"></script>
 
