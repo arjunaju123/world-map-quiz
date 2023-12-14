@@ -7,6 +7,7 @@ const {numberOfQuestions} = getUserData();
 let currentQuestionCount = -1;
 
 let userScore = 0;
+let scorePercentage = 0;
 
 // Arrow function to display the next question
 const nextQuestion = () => {
@@ -26,6 +27,7 @@ const nextQuestion = () => {
   } else {
     //after last question is reached
 
+    scorePercentage = (userScore/numberOfQuestions)*100;
     document.getElementById("cardBody").innerHTML = `
                     <h2 class="card-title mb-4">Game Completed!</h2>
                     <p class="card-text">You have completed the game with a score ${userScore}</p>`;

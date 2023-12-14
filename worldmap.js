@@ -19,3 +19,14 @@ function getUserData() {
         numberOfQuestions
     };
 }
+
+function startGame(){
+    storeUserData();
+    if(document.getElementById('firstName').value.trim() === ""){
+        alert("Enter Valid Name");
+    }
+    else{
+        window.location.href = "serious.html"
+    }
+    
+}
