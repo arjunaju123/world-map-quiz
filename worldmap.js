@@ -7,7 +7,15 @@ function storeUserData() {
     localStorage.setItem('username', username);
     localStorage.setItem('numberOfQuestions', numberOfQuestions);
 
-    
 }
 
+function getUserData() {
+    // Get the data from localStorage
+    let username = localStorage.getItem('username');
+    let numberOfQuestions = parseInt(localStorage.getItem('numberOfQuestions'), 10);
 
+    return {
+        username,
+        numberOfQuestions
+    };
+}

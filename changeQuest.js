@@ -27,7 +27,7 @@ const questions = new Map([
 // const numberOfQuestions = questionCountInput.value;
 // console.log(`Number of questions entered: ${numberOfQuestions}`);
 
-let currentQuestionIndex = 1; // Initialize question index
+let currentQuestionIndex = 0; // Initialize question index
 
 function changeQuestion() {
     const questionElement = document.getElementById("question");
