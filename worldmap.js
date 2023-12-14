@@ -2,6 +2,7 @@ function storeUserData() {
     // Get the values from the input fields
     const username = document.getElementById('firstName').value;
     const numberOfQuestions = parseInt(document.getElementById('number').value, 10);
+    console.log("started");
 
     // Store the data in localStorage
     localStorage.setItem('username', username);
@@ -19,3 +20,4 @@ function getUserData() {
         numberOfQuestions
     };
 }
+

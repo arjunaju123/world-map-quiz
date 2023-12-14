@@ -25,10 +25,11 @@ const nextQuestion = () => {
     changeQuestion();
   } else {
     //after last question is reached
-
     document.getElementById("cardBody").innerHTML = `
-                    <h2 class="card-title mb-4">Game Completed!</h2>
-                    <p class="card-text">You have completed the game with a score ${userScore}</p>`;
+      <h2 class="card-title mb-4">Game Completed!</h2>
+      <p class="card-text">You have completed the game with a score ${userScore}</p>
+      <div><img src="assets/animated_gif.gif" alt="Animated GIF" style="width: 300px; height: auto;"></div>`;
+
 
     // You can calculate the user's score based on their answers and questions attempted
     // For simplicity, let's assume a fixed score here
