@@ -36,7 +36,7 @@ const nextQuestion = () => {
                     <span class="typing-animation completed" style="font-size: 80px; color: white">Game Completed!</span>
                 </h2>
 
-        <div style="position: absolute; top: 40%; right: 30%; z-index: 1;">
+        <div style="position: absolute; top: 25%; right: 30%; z-index: 1;">
             <img src="assets/heart_break.gif" alt="Animated GIF" style="width: 300px; height: auto;">
           </div>
                 <div class="card text-left">
@@ -49,12 +49,28 @@ const nextQuestion = () => {
                         </p>
                         <p class="card-text">
                             <span class="typing-animation">PERCENTAGE : ${scorePercentage}</span>
+                        </p> 
+                        <p class="card-text">
+                            <span class="typing-animation" style="color:red;animation: slideAndType 7s infinite linear;font-size: 34px;";>YOU FAILED</span>
                         </p>  
                     </div>
                 </div>
             </div>
         </div>
     </div></div>`;
+
+      // Add the CSS styles for the bouncing animation
+    document.head.innerHTML += `
+        <style>
+      @keyframes slideAndType {
+        0%, 100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(260%);
+        }
+      }
+        </style>`;
     } else {
       //if score percentage greater than 50%
       document.body.innerHTML = `
@@ -83,12 +99,28 @@ const nextQuestion = () => {
                         </p>
                         <p class="card-text">
                             <span class="typing-animation">PERCENTAGE : ${scorePercentage}</span>
-                        </p>  
+                        </p>
+                        <p class="card-text">
+                            <span class="typing-animation" style="color:green;animation: slideAndType 7s infinite linear;font-size: 34px;";>YOU WON</span>
+                        </p>    
                     </div>
                 </div>
             </div>
         </div>
     </div></div>`;
+
+      // Add the CSS styles for the bouncing animation
+      document.head.innerHTML += `
+        <style>
+      @keyframes slideAndType {
+        0%, 100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(400%);
+        }
+      }
+        </style>`;
     }
   }
 };
