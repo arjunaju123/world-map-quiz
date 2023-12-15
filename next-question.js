@@ -83,7 +83,7 @@ const answers=[
           document.getElementById('result').innerHTML = '<strong>Correct Answer</strong>';
         }//to print statement in the div with id result
           else {
-              document.getElementById('result').innerHTML = 'Wrong Answer';;
+              document.getElementById('result').innerHTML = '<strong style="color: red">Wrong Answer</strong>';
           }
 
           document.getElementById("image-map-container-id").style="pointer-events: none"
