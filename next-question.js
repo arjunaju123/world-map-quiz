@@ -1,7 +1,7 @@
 // Retrieve the number of questions from localStorage
 // const numberOfQuestions = parseInt(localStorage.getItem("numberOfQuestions"));
 
-const {numberOfQuestions} = getUserData();
+const {numberOfQuestions, username} = getUserData();
 
 // Initialize question count
 let currentQuestionCount = -1;
@@ -60,11 +60,10 @@ const nextQuestion = () => {
         <div style="position: absolute; top: 40%; right: 30%; z-index: 1;">
             <img src="assets/heart_break.gif" alt="Animated GIF" style="width: 300px; height: auto;">
           </div>
-
                 <div class="card text-left">
                     <div class="card-body" id="cardBody">
                <p class="card-text">
-                            <span class="typing-animation">PLAYER : Name</span>
+                            <span class="typing-animation">PLAYER : ${username}</span>
                         </p>
                         <p class="card-text">
                             <span class="typing-animation"> SCORE :${userScore}</span>
@@ -101,7 +100,7 @@ const nextQuestion = () => {
                 <div class="card text-left">
                     <div class="card-body" id="cardBody">
                <p class="card-text">
-                            <span class="typing-animation">PLAYER : Name</span>
+                            <span class="typing-animation">PLAYER : ${username}</span>
                         </p>
                         <p class="card-text">
                             <span class="typing-animation"> SCORE :${userScore}</span>

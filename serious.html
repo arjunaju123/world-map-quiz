@@ -35,7 +35,7 @@
             color: green; font-family: 'MinecraftiaRegular';
         font-weight: normal;
         font-style: normal;
-        text-shadow: 5px 5px rgb(99, 97, 97);
+        text-shadow: 2px 2px rgb(99, 97, 97);
                 }
 
         .card-text{
@@ -43,6 +43,18 @@
         font-weight: normal;
         font-style: normal;
         font-size: x-large;
+        }
+
+        .button-div{
+            color: white; font-family: 'MinecraftiaRegular';
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        .reset-button{
+            background-color: red;
+        }
+        .next-question-button{
+            background-color: #08f26e;
         }
 
         .container{
@@ -63,11 +75,37 @@
             border-right: 2px solid transparent; /* Simulate cursor */
         }
 
+        /* ============================================= */
+
+        @import url("https://fontlibrary.org//face/minecraftia");
+.card-title {
+    color: rgb(241, 11, 222); font-family: 'MinecraftiaRegular';
+   font-weight: normal;
+   font-style: normal;
+        
+}
+.card-text {
+    color:green; font-family: 'MinecraftiaRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+
+.btn {
+    color: white; font-family: 'MinecraftiaRegular';
+    
+   font-weight: normal;
+   font-style: normal;
+}
+.container{
+    opacity: 90%;
+    border-radius: 20px;
+}
+
                 
 </style>
     </head>
 
-<body>
+<body style="background-image:url('assets/gamebg.jpg'); background-size: cover;">
     <div class="container py-5">
         <div id="container" class="row justify-content-center">
             <div class="col-lg-10">
@@ -121,10 +159,10 @@
                         });
                         }, 500);
                      </script>
+                        
+                        <a href="#" class="btn btn-primary button-div next-question-button" onclick="nextQuestion()">Next Question</a>
 
-                        <a href="#" class="btn btn-primary button-div" onclick="nextQuestion()">Next Question</a>
-                        <a href="index.html" class="btn btn-primary button-div">Reset</a>
-
+                        <a href="index.html" class="btn btn-primary button-div reset-button">Reset</a>
                     </div>
                 </div>
             </div>
