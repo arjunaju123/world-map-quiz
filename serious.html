@@ -73,6 +73,17 @@
             animation: typing 3s steps(40, end); /* Adjust animation duration and steps */
             white-space: nowrap;
             border-right: 2px solid transparent; /* Simulate cursor */
+            
+        }
+        
+    .completed {
+        animation: blink 1s infinite; /* Change the duration as needed */
+        }
+            
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         /* ============================================= */
