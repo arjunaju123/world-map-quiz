@@ -60,7 +60,7 @@ const nextQuestion = () => {
     </div></div>`;
 
       // Add the CSS styles for the bouncing animation
-      document.head.innerHTML += `
+    document.head.innerHTML += `
         <style>
       @keyframes slideAndType {
         0%, 100% {
