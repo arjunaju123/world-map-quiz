@@ -19,10 +19,11 @@ const checkAnswer = (clickedContinent) =>  {
 
     if (clickedContinent == correctAnswer) {    
         score++;
+        //to print statement in the div with id result
         document.getElementById('result').innerHTML = 'Correct Answer';
-    }//to print statement in the div with id result
-        else {
+    }
+    else {
         
             document.getElementById('result').innerHTML = 'Wrong Answer';
         }
-    }
+}
