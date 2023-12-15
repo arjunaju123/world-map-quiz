@@ -129,7 +129,7 @@
 <body style="background-image:url('assets/gamebg.jpg'); background-size: cover;">
     <div class="container py-5">
         <!-- <div class="score" style="float:right;"> -->
-            <p class="score" >SCORE :</p>
+            <p class="score" >SCORE : <span id="score-show">0</span></p>
         <!-- </div> -->
         <div id="container" class="row justify-content-center">
             <div class="col-lg-10">
@@ -161,14 +161,25 @@
                                     shape="poly" onclick="checkAnswer('Europe')">
                             </map>
                         </div>
-                        <audio loop autoplay>
+                        <audio id="audio-background" loop autoplay>
                             <source src="assets/background_music.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                           </audio>
                      </audio>
 
+                     <audio id="audio-correct" loop>
+                        <source src="assets/correct_answer.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>
+                      <audio id="audio-wrong" loop>
+                        <source src="assets/wrong_answer.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>
+                 </audio>
+
                      <script>
-                        let audioElem = document.querySelector("audio");
+                        // let audioElem = document.querySelector("audio");
+                        let audioElem = document.getElementById("audio-background");
 
                         let startPlayPromise = audioElem.play();
 
@@ -182,6 +193,7 @@
                             console.log("Unable to play the audio, User has not interacted yet.");
                         });
                         }, 500);
+
                      </script>
                         
                         <a href="#" class="btn btn-primary button-div next-question-button" onclick="nextQuestion()">Next Question</a>

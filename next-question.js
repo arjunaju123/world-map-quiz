@@ -21,7 +21,7 @@ const nextQuestion = () => {
     changeQuestion();
   } else {//after last question is reached
 
-    scorePercentage = (userScore / numberOfQuestions) * 100; //score percentage calculated
+    scorePercentage = Math.round((userScore / numberOfQuestions) * 100); //score percentage calculated
 
     if (scorePercentage < 50) {
       //append the completion page html and details to the current serious.html page
@@ -111,17 +111,29 @@ const answers = [
 const checkAnswer = (clickedContinent) => {
   //check answwer function returns the continent on the map we clicked.
 
+  const audioCorrect = document.getElementById("audio-correct");
+  const audioWrong = document.getElementById("audio-wrong");
+
   const correctAnswer = answers[randomIndex - 1]; // random index is got from 1 to 10. But answer array has values from 0 to 9.
 
   console.log("Correct Answer: ", correctAnswer);
   if (clickedContinent == correctAnswer) {
+    audioCorrect.play();
+    setTimeout(() => {
+      audioCorrect.pause();
+    } ,2000);
     userScore++; //user score increased by one
+    document.getElementById("score-show").innerText = userScore;
     document.getElementById("result").innerHTML =
       "<strong>Correct Answer</strong>"; //result is showed - correct
   } //to print statement in the div with id result
   
   else {
     //if answer is wrong
+    audioWrong.play();
+    setTimeout(() => {
+      audioWrong.pause();
+    } ,2000);
     document.getElementById("result").innerHTML =
       '<strong style="color: red">Wrong Answer</strong>'; ////result is showed - wrong
   }
