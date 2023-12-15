@@ -2,6 +2,7 @@ function storeUserData() {
     // Get the values from the input fields
     const username = document.getElementById('firstName').value;
     const numberOfQuestions = parseInt(document.getElementById('number').value, 10);
+    console.log("started");
 
     // Store the data in localStorage
     localStorage.setItem('username', username);
@@ -18,4 +19,15 @@ function getUserData() {
         username,
         numberOfQuestions
     };
+}
+
+function startGame(){
+    storeUserData();
+    if(document.getElementById('firstName').value.trim() === ""){
+        alert("Enter Valid Name");
+    }
+    else{
+        window.location.href = "serious.html"
+    }
+    
 }
