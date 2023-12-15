@@ -106,6 +106,7 @@
 </head>
 
 <body>
+    
     <div class="container mt-5">
         <div class="cloud"><img src="/assets/cloud_pixel1.png"></div>
         <h1 class="gametitle">WORLD MAP GAME</h1>
@@ -130,13 +131,41 @@
                                     <option value="10">10</option>
                                 </select>
                             </div>
-                            <div>
+                            <!-- <div>
                                 <a href="./serious.html">
                                     <button class="btn btn-primary" onclick="storeUserData()">Get Started!</button>
                                 </a>
 
-                              <!-- <a href="./serious.html" onclick="storeUserData()">Get Started</a> -->
-                            </div>
+                              <a href="./serious.html" onclick="storeUserData()">Get Started</a>
+                            </div> -->
+
+                            <!-- <div> -->
+                                <audio loop autoplay>
+                                    <source src="assets/background_music.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                  </audio>
+                             </audio>
+
+                             <script>
+                                let audioElem = document.querySelector("audio");
+
+                                let startPlayPromise = audioElem.play();
+
+                                let playAttempt = setInterval(() => {
+                                audioElem
+                                .play()
+                                .then(() => {
+                                    clearInterval(playAttempt);
+                                })
+                                .catch((error) => {
+                                    console.log("Unable to play the audio, User has not interacted yet.");
+                                });
+                                }, 500);
+                             </script>
+                             
+                            <!-- </div> -->
+
+
                         </form>
                
                         </div>
@@ -170,6 +199,7 @@
                     <button class="btn btn-primary" onclick="startGame()">Get Started!</button>
                 <!-- </a> -->
             </div>
+            
         </div>
     </div>
     </div>
