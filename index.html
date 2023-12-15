@@ -87,14 +87,42 @@
         .cloud {
             position: absolute;
             top: 0px; /* Adjust the distance from the top */
-            left: -200px; /* Start position outside the left side of the screen */
             width: 10px;
             height: 10px;
             border-radius: 10%;
-            animation: moveCloud 10s linear infinite;
+            left: -200px;
+        }
+        .cloud-forward{
+            top: 10px;
+            /* left: -200px;  */
+            animation: moveCloudForward 20s linear infinite;
+        }
+        .cloud-forward1{
+            /* left: -400px; */
+            animation: moveCloudForward 15s linear infinite;
+        }
+        .cloud-forward2{
+            top: 15px;
+            /* left: -600px; */
+            animation: moveCloudForward 21s linear infinite;
+        }
+        .cloud-forward3{
+            top: 15px;
+            /* left: -600px; */
+            animation: moveCloudForward 30s linear infinite;
+        }
+        .cloud-forward4{
+            top: 15px;
+            /* left: -600px; */
+            animation: moveCloudForward 35s linear infinite;
+        }
+        .cloud-forward5{
+            top: 15px;
+            /* left: -600px; */
+            animation: moveCloudForward 40s linear infinite;
         }
 
-        @keyframes moveCloud {
+        @keyframes moveCloudForward {
             to {
                 transform: translateX(calc(100vw + 200px)); /* Move the cloud to the right side of the screen */
             }
@@ -107,7 +135,14 @@
 <body>
     
     <div class="container mt-5">
-        <div class="cloud"><img src="assets/cloud_pixel1.png"></div>
+        <div class="cloud cloud-forward"><img src="assets/cloud_pixel1_white.png" width="200px"></div>
+        <div class="cloud cloud-forward1"><img src="assets/cloud_pixel1_white.png" width="200px"></div>
+        <div class="cloud cloud-forward2"><img src="assets/cloud_pixel1_white.png" width="100px"></div>
+
+        <div class="cloud cloud-forward3"><img src="assets/cloud_pixel1_white.png" width="200px"></div>
+        <div class="cloud cloud-forward4"><img src="assets/cloud_pixel1_white.png" width="200px"></div>
+        <div class="cloud cloud-forward5"><img src="assets/cloud_pixel1_white.png" width="100px"></div>
+
         <h1 class="gametitle">WORLD MAP GAME</h1>
         <div class="inputform1">
          <form class="inputform">
