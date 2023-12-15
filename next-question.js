@@ -27,12 +27,94 @@ const nextQuestion = () => {
   } else {
     //after last question is reached
 
-    scorePercentage = (userScore/numberOfQuestions)*100;
-    document.getElementById("cardBody").innerHTML = `
-      <h2 class="card-title mb-4">Game Completed!</h2>
-      <p class="card-text">You have completed the game with a score ${userScore}</p>
-      <div><img src="assets/animated_gif.gif" alt="Animated GIF" style="width: 300px; height: auto;"></div>`;
+    scorePercentage = (userScore / numberOfQuestions) * 100;
+    // document.getElementById("cardBody").innerHTML = `
+    //   <h2 class="card-title mb-5">Game Completed!</h2>
+    //   <p class="card-text">You have completed the game with a score ${userScore}</p>
+    //   <div><img src="assets/animated_gif.gif" alt="Animated GIF" style="width: 300px; height: auto;"></div>`;
 
+    if(scorePercentage<50){
+      // Assuming userScore and percentage are variables with the respective values
+
+      scorePercentage = (userScore / numberOfQuestions) * 100;
+   
+      
+                //   <div style="position: absolute; top: 50%; left: 20px; transform: translate(-50%, -50%);">
+                //     <img src="assets/heart_break.gif" alt="Animated GIF" style="width: 300px; height: auto;">
+                // </div>
+
+                // <div style="position: absolute; top: 50%; right: 20px; transform: translate(50%, -50%);">
+                //     <img src="assets/heart_break.gif" alt="Animated GIF" style="width: 300px; height: auto;">
+                // </div>
+  document.body.innerHTML = `
+
+  <div style="background-image: url(assets/desert.jpg); background-size: cover;margin: 0;
+  padding: 0;height: 100vh;">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="card-title mb-4" style="font-size: 80px; color: red; margin-left: 70px;">
+                    <span class="typing-animation" style="font-size: 80px; color: red">Game Completed!</span>
+                </h2>
+
+        <div style="position: absolute; top: 40%; right: 30%; z-index: 1;">
+            <img src="assets/heart_break.gif" alt="Animated GIF" style="width: 300px; height: auto;">
+          </div>
+
+                <div class="card text-left">
+                    <div class="card-body" id="cardBody">
+               <p class="card-text">
+                            <span class="typing-animation">PLAYER : Name</span>
+                        </p>
+                        <p class="card-text">
+                            <span class="typing-animation"> SCORE :${userScore}</span>
+                        </p>
+                        <p class="card-text">
+                            <span class="typing-animation">PERCENTAGE : ${scorePercentage}</span>
+                        </p>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>`;  
+
+    }
+
+    else{
+   scorePercentage = (userScore / numberOfQuestions) * 100;
+   document.body.innerHTML = `
+
+  <div style="background-image: url(assets/desert.jpg); background-size: cover;margin: 0;
+  padding: 0;height: 100vh;">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="card-title mb-4" style="font-size: 80px; color: red; margin-left: 70px;">
+                    <span class="typing-animation" style="font-size: 80px; color: red">Game Completed!</span>
+                </h2>
+
+                
+        <div style="position: absolute; top: 20%; right: 30%; z-index: 1;">
+            <img src="assets/animated_gif.gif" alt="Animated GIF" style="width: 300px; height: auto;">
+          </div>
+
+                <div class="card text-left">
+                    <div class="card-body" id="cardBody">
+               <p class="card-text">
+                            <span class="typing-animation">PLAYER : Name</span>
+                        </p>
+                        <p class="card-text">
+                            <span class="typing-animation"> SCORE :${userScore}</span>
+                        </p>
+                        <p class="card-text">
+                            <span class="typing-animation">PERCENTAGE : ${scorePercentage}</span>
+                        </p>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>`;
+    }
 
     // You can calculate the user's score based on their answers and questions attempted
     // For simplicity, let's assume a fixed score here

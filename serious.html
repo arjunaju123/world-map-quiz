@@ -8,12 +8,68 @@
 
 <style>
 
+        @import url("https://fontlibrary.org//face/minecraftia");
+
+        @keyframes typing {
+            from {
+                width: 0;
+                border-right-width: 1px; /* Start with zero width */
+            }
+            to {
+                width: 100%; 
+                border-right-width: 1px;/* Gradually increase width to full */
+            }
+        }
+
+        @keyframes popUp {
+            0% {
+                transform: scale(0); /* Initial scale set to 0 */
+            }
+            100% {
+                transform: scale(1); /* Final scale set to 1 (normal size) */
+            }
+        }
+
+    
+        .card-title{
+            color: green; font-family: 'MinecraftiaRegular';
+        font-weight: normal;
+        font-style: normal;
+        text-shadow: 5px 5px rgb(99, 97, 97);
+                }
+
+        .card-text{
+            color: black; font-family: 'MinecraftiaRegular';
+        font-weight: normal;
+        font-style: normal;
+        font-size: x-large;
+        }
+
+        .container{
+            opacity: 90%;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .card{
+            border:none;
+            border-radius: 30px; 
+            animation: popUp 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .typing-animation {
+            display: inline-block;
+            overflow: hidden;
+            animation: typing 3s steps(40, end); /* Adjust animation duration and steps */
+            white-space: nowrap;
+            border-right: 2px solid transparent; /* Simulate cursor */
+        }
+
+                
 </style>
     </head>
 
 <body>
     <div class="container py-5">
-        <div class="row justify-content-center">
+        <div id="container" class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="card text-center">
                     <div class="card-body" id="cardBody">
