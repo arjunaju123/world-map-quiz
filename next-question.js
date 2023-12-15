@@ -57,6 +57,7 @@ const nextQuestion = () => {
                 </div>
             </div>
         </div>
+        <a href="index.html" class="btn btn-primary button-div try_again">Try Again!</a>
     </div></div>`;
 
       // Add the CSS styles for the bouncing animation
@@ -107,6 +108,7 @@ const nextQuestion = () => {
                 </div>
             </div>
         </div>
+        <a href="index.html" class="btn btn-primary button-div try_again">Try Again!</a>
     </div></div>`;
 
       // Add the CSS styles for the bouncing animation
