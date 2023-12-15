@@ -23,24 +23,7 @@ const questions = new Map([
 
 ]);
 
-// const questionCountInput = document.getElementById("questionCountInput");
-// const numberOfQuestions = questionCountInput.value;
-// console.log(`Number of questions entered: ${numberOfQuestions}`);
 
-let currentQuestionIndex = 0; // Initialize question index
-
-// function changeQuestion() {
-//     const questionElement = document.getElementById("question");
-
-//     if (currentQuestionIndex < questions.size) {
-//         currentQuestionIndex++; // Move to the next question
-//     } else {
-//         currentQuestionIndex = 1; // If no more questions, restart from the first question
-//     }
-
-//     // Update the question content using the Map's get() method
-//     questionElement.textContent = questions.get(currentQuestionIndex);
-// }
 
 let askedQuestions = [];
 let randomIndex = 0;
