@@ -64,7 +64,7 @@
         .card{
             border:none;
             border-radius: 30px; 
-            animation: popUp 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            animation: popUp 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
         .typing-animation {
@@ -73,6 +73,17 @@
             animation: typing 3s steps(40, end); /* Adjust animation duration and steps */
             white-space: nowrap;
             border-right: 2px solid transparent; /* Simulate cursor */
+            
+        }
+        
+    .completed {
+        animation: blink 1s infinite; /* Change the duration as needed */
+        }
+            
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         /* ============================================= */
@@ -82,10 +93,11 @@
     color: rgb(241, 11, 222); font-family: 'MinecraftiaRegular';
    font-weight: normal;
    font-style: normal;
+   text-shadow: 2px 2px rgb(68, 66, 66);
         
 }
 .card-text {
-    color:green; font-family: 'MinecraftiaRegular';
+    color:black; font-family: 'MinecraftiaRegular';
    font-weight: normal;
    font-style: normal;
 }
@@ -100,13 +112,25 @@
     opacity: 90%;
     border-radius: 20px;
 }
+.score{
+    margin-left: 950px;
+    color:aliceblue;
+    align-items: end;
+    font-family: 'MinecraftiaRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: x-large;
+}
 
-                
+
 </style>
     </head>
 
 <body style="background-image:url('assets/gamebg.jpg'); background-size: cover;">
     <div class="container py-5">
+        <!-- <div class="score" style="float:right;"> -->
+            <p class="score" >SCORE :</p>
+        <!-- </div> -->
         <div id="container" class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="card text-center">
