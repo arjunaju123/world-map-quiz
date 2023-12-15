@@ -46,7 +46,7 @@
             color: rgb(255, 135, 155);
             font-family: 'MinecraftiaRegular';
             border-color: transparent;
-            font-weight: bold;
+            font-weight:bolder;
             font-style: normal;
             text-align: center;
             font-size: 4em;
@@ -57,6 +57,12 @@
            text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
 
 }
+        .start_btn{
+            font-family: 'MinecraftiaRegular';
+            border-color: transparent;
+            font-weight:bolder;
+            font-style: normal;
+        }
 
         .inputform{
              font-family: 'MinecraftiaRegular';
@@ -108,7 +114,7 @@
 <body>
     
     <div class="container mt-5">
-        <div class="cloud"><img src="/assets/cloud_pixel1.png"></div>
+        <div class="cloud"><img src="assets/cloud_pixel1.png"></div>
         <h1 class="gametitle">WORLD MAP GAME</h1>
         <div class="inputform1">
          <form class="inputform">
@@ -131,6 +137,7 @@
                                     <option value="10">10</option>
                                 </select>
                             </div>
+                            
                             <!-- <div>
                                 <a href="./serious.html">
                                     <button class="btn btn-primary" onclick="storeUserData()">Get Started!</button>
@@ -167,6 +174,11 @@
 
 
                         </form>
+                        <div class="text-left">
+                            <!-- <a href="./serious.html"> -->
+                                <button class="btn btn-primary start_btn" onclick="startGame()">START!</button>
+                            <!-- </a> -->
+                        </div>
                
                         </div>
         <div class="card">
@@ -194,11 +206,7 @@
                 <p id="user-score"></p>
             </div>
 
-            <div class="text-center">
-                <!-- <a href="./serious.html"> -->
-                    <button class="btn btn-primary" onclick="startGame()">Get Started!</button>
-                <!-- </a> -->
-            </div>
+            
             
         </div>
     </div>

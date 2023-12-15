@@ -54,7 +54,7 @@ const nextQuestion = () => {
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <h2 class="card-title mb-4" style="font-size: 80px; color: red; margin-left: 70px;">
-                    <span class="typing-animation" style="font-size: 80px; color: red">Game Completed!</span>
+                    <span class="typing-animation completed" style="font-size: 80px; color: white">Game Completed!</span>
                 </h2>
 
         <div style="position: absolute; top: 40%; right: 30%; z-index: 1;">
@@ -66,7 +66,7 @@ const nextQuestion = () => {
                             <span class="typing-animation">PLAYER : ${username}</span>
                         </p>
                         <p class="card-text">
-                            <span class="typing-animation"> SCORE :${userScore}</span>
+                            <span class="typing-animation"> SCORE : ${userScore}</span>
                         </p>
                         <p class="card-text">
                             <span class="typing-animation">PERCENTAGE : ${scorePercentage}</span>
@@ -89,7 +89,7 @@ const nextQuestion = () => {
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <h2 class="card-title mb-4" style="font-size: 80px; color: red; margin-left: 70px;">
-                    <span class="typing-animation" style="font-size: 80px; color: red">Game Completed!</span>
+                    <span class="typing-animation completed" style="font-size: 80px; color:  white">Game Completed!</span>
                 </h2>
 
                 
@@ -103,7 +103,7 @@ const nextQuestion = () => {
                             <span class="typing-animation">PLAYER : ${username}</span>
                         </p>
                         <p class="card-text">
-                            <span class="typing-animation"> SCORE :${userScore}</span>
+                            <span class="typing-animation">SCORE : ${userScore}</span>
                         </p>
                         <p class="card-text">
                             <span class="typing-animation">PERCENTAGE : ${scorePercentage}</span>
